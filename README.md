@@ -47,12 +47,12 @@ The output files will be named:
 
 
 ```bash
-test_1-100.csv
-test_201-300.csv
+my_data_1-100.csv
+my_data_201-300.csv
 .
 .
 .
 .
-test_501-1000.csv
+my_data_501-1000.csv
 ```
 ...
