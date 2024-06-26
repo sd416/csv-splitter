@@ -19,27 +19,40 @@ A Python script to split large CSV files into smaller files with a specified num
 
 2. Run the script:
     ```bash
-    python csv_splitter.py
+    python split_csv.py -f my_data.csv -n 100 -d /path/to/output
     ```
 
-3. Follow the prompts:
-    - **Input File Name**: Name of the input CSV file (with or without `.csv` extension).
-    - **Number of Rows**: Number of rows per split file.
-    - **Destination Path**: Directory where the split files will be saved.
+3. arguments:
+
+- **-f FILENAME, --filename FILENAME**
+  - Name of the input CSV file. The .csv extension is optional.
+  
+- **-n NUM_ROWS, --num_rows NUM_ROWS**
+  - Number of rows to include in each split file.
+  
+- **-d DESTINATION, --destination DESTINATION**
+  - Directory path where the split files will be saved. Defaults to the current directory.
+
+
 
 ## Example
 
 ```bash
-Input File Name: test
-Number of Rows: 500
-Destination Path: /path/to/output
+
+    python split_csv.py -f my_data.csv -n 100 -d /path/to/output
 
 ```
 
 The output files will be named:
 
-test_1-500.csv
 
+```bash
+test_1-100.csv
+test_201-300.csv
+.
+.
+.
+.
 test_501-1000.csv
-
+```
 ...
